@@ -25,7 +25,7 @@
         <p class="ui red ribbon label">友情链接</p>
         <div class="animated list friend">
             <!-- 我自行修改插件添加的输出方式, 默认没有这种方式 -->
-            <?php Links_Plugin::output("SHOW_SLOGER", 8); ?>
+            <?php Links_Plugin::output("SHOW_SLOGER", 10); ?>
         </div>
     </section>
     <?php endif; ?>
