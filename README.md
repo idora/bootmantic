@@ -46,34 +46,6 @@ bootmantic = bootstrap + semantic
 ![theme_setting][6]
 
 
-###注意###
-
-本主题中使用的Links友情链接插件是我自己修改后的, 因为默认的输出方式并不适合我.
-
-修改方式如下.
-
-找到Links插件下的Plugin.php, 找到264行, 添加一种输出方式.
-
-```php
-else if ($pattern == "SHOW_SLOGER") {
-    $pattern = "<a class=\"item\" href=\"{url}\" title=\"{title}\" target=\"_blank\"><img class=\"avatar image\" src=\"{image}\" alt=\"{name}\" /><div class=\"content\"><p class=\"header\">{name}</p><p>{description}</p></div></a>\n"
-}
-```
-
-![links_plugins][7]
-
-
-`$pattern` 的名称无所谓, 但是要是跟我这里不一样的话, 需要修改sidebar.php修改相应的输出方式.
-
-如果觉得这里的pattern太乱, 可以去我的 [博客首页][1] 右键选择审查元素, 找到 友情链接 部分, 照着葫芦画瓢吧.
-
-为什么需要自定义插件, 而不是把css写成适应插件?
-
-因为我在写这个theme时还没有用links插件. 之后才用的links插件.
-
-
-我已经向links插件作者 寒泥 提出了建议, 建议在Links_output()时添加自定义输出方式的的功能, 暂未得到答复.
-
 ###说明###
 
 页脚的说明请不要删除, 这是对主题作者的尊重.
@@ -105,4 +77,3 @@ else if ($pattern == "SHOW_SLOGER") {
 [4]: http://slblog.qiniudn.com/blog/theme_friend.png
 [5]: https://github.com/DreamHarbor/bootmantic
 [6]: http://slblog.qiniudn.com/blog/theme_setting.png
-[7]: http://slblog.qiniudn.com/blog/links_plugins.png
