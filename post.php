@@ -2,7 +2,7 @@
 
 <div class="main">
     <article class="block post">
-        <span class="round-date">
+        <span class="round-date <?php $this->options->labelColor() ?>">
             <span class="month"><?php $this->date('m月'); ?></span>
             <span class="day"><?php $this->date('d'); ?></span>
         </span>
@@ -13,6 +13,13 @@
         </div>
         <p class="tags"><?php _e('标签：'); ?><?php $this->tags(', ', true, 'none'); ?></p>
     </article>
+
+<!--
+    <div class="block page-link">
+        <?php $this->thePrev('<< %s', '没有上一篇'); ?>
+        <?php $this->theNext('%s >>', '没有下一篇'); ?>
+    </div>
+-->
 
     <?php $this->need('comments.php'); ?>
 </div>

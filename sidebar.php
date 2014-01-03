@@ -1,7 +1,7 @@
 <div class="side">
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section class="block">
-        <p class="ui red ribbon label"><?php _e('最新文章'); ?></p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('最新文章'); ?></p>
         <div class="list">
             <?php $this->widget('Widget_Contents_Post_Recent')->parse('<a href="{permalink}" class="item" target="_blank">{title}</a>'); ?>
         </div>
@@ -10,7 +10,7 @@
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
     <section class="block">
-        <p class="ui red ribbon label"><?php _e('最近回复'); ?></p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('最近回复'); ?></p>
         <div class="list">
         <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
         <?php while($comments->next()): ?>
@@ -22,7 +22,7 @@
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowFriend', $this->options->sidebarBlock)): ?>
     <section class="block friend-list">
-        <p class="ui red ribbon label">友情链接</p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label">友情链接</p>
         <div class="animated list friend">
             <?php Links_Plugin::output("<a class=\"item\" href=\"{url}\" title=\"{title}\" target=\"_blank\"><img class=\"avatar image\" src=\"{image}\" alt=\"{name}\" /><div class=\"content\"><p class=\"header\">{name}</p><p>{description}</p></div></a>\n", 10); ?>
         </div>
@@ -31,7 +31,7 @@
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
     <section class="block">
-        <p class="ui red ribbon label"><?php _e('分类'); ?></p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('分类'); ?></p>
         <div class="animated list category">
             <?php $this->widget('Widget_Metas_Category_List')->parse('<div class="item"><a href="{permalink}" target="_blank">{name}</a> <div class="ui label">{count}</div></div>'); ?>
         </div>
@@ -40,7 +40,7 @@
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
     <section class="block">
-        <p class="ui red ribbon label"><?php _e('归档'); ?></p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('归档'); ?></p>
         <div class="animated list">
             <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y 年 m 月')->parse('<a href="{permalink}" class="item" target="_blank">{date}</a>'); ?>
         </div>
@@ -49,7 +49,7 @@
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowOther', $this->options->sidebarBlock)): ?>
     <section class="block">
-        <p class="ui red ribbon label"><?php _e('其它'); ?></p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('其它'); ?></p>
         <div class="animated list">
             <?php if($this->user->hasLogin()): ?>
             <a class="item" href="<?php $this->options->adminUrl(); ?>" target="_blank"><?php _e('进入后台'); ?> (<?php $this->user->screenName(); ?>)</a>

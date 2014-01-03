@@ -27,10 +27,34 @@
 #back-to-top #rocket {
     margin: 8px;
 }
-#back-to-top:hover #rocket path {
-    fill: rgba(255, 102, 0, 0.76);
-}
 
+#back-to-top #rocket path {
+    transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+}
+#back-to-top.red:hover #rocket path {
+    fill: #D95C5C;
+}
+#back-to-top.green:hover #rocket path {
+    fill: #A1CF64;
+}
+#back-to-top.blue:hover #rocket path {
+    fill: #6ECFF5;
+}
+#back-to-top.purple:hover #rocket path {
+    fill: #564F8A;
+}
+#back-to-top.orange:hover #rocket path {
+    fill: #F05940;
+}
+#back-to-top.teal:hover #rocket path {
+    fill: #00B5AD;
+}
+#back-to-top.grey:hover #rocket path {
+    fill: #E8E8E8;
+}
 
 /* 导航栏 */
 .navbar {

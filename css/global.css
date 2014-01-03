@@ -112,6 +112,7 @@ pre, code {
 pre {
     padding: 10px;
     border-left: 4px solid #de3859;
+    overflow: auto;
 }
 pre code {
     border: 0px;

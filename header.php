@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="ScmDBVL4m8_1FCWi0q1GowKId0hYzo3t10pCTkxiMwg" />
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -53,7 +54,7 @@
 
 <body>
   
-<div id="back-to-top" data-scroll="body">
+<div id="back-to-top" class="<?php $this->options->labelColor() ?>" data-scroll="body">
     <svg id="rocket" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
         <path fill="#CCCCCC" d="M42.057,37.732c0,0,4.139-25.58-9.78-36.207c-0.307-0.233-0.573-0.322-0.802-0.329
         c-0.227,0.002-0.493,0.083-0.796,0.311c-13.676,10.31-8.95,35.992-8.95,35.992c-10.18,8-7.703,9.151-1.894,23.262
@@ -79,6 +80,8 @@
             </form>
             <ul class="nav">
                 <li><a href="<?php $this->options->feedUrl(); ?>" class="zocial rss" target="_blank"></a></li>
+                <li><a href="https://github.com/DreamHarbor" class="zocial github" target="_blank"></a></li>
+                <li><a href="http://weibo.com/jtly5039" class="zocial weibo" target="_blank"></a></li>
             </ul>
         </div>
     </div>

@@ -10,6 +10,17 @@ function themeConfig($form) {
     $siteIcon = new Typecho_Widget_Helper_Form_Element_Text('siteIcon', NULL, NULL, _t('标题栏和书签栏Icon'), _t('在这里填入一个图片URL地址, 作为标题栏和书签栏Icon, 默认不显示'));
     $form->addInput($siteIcon);
 
+    $labelColor = new Typecho_Widget_Helper_Form_Element_Select('labelColor', array(
+        'red' => _t('红色'),
+        'green' => _t('绿色'),
+        'blue' => _t('蓝色'),
+        'purple' => _t('紫色'),
+        'orange' => _t('橙色'),
+        'teal' => _t('青色'),
+        'grey' => _t('灰色'),
+    ), NULL, _t('标签颜色'), _t('包括标签的颜色和每篇文章中的圆形日期的颜色'));
+    $form->addInput($labelColor);
+
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', array(
         'ShowRecentPosts' => _t('显示最新文章'),

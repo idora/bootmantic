@@ -1,7 +1,7 @@
 <?php $this->comments()->to($comments); ?>
 
 <div class="block">
-    <p class="ui red ribbon label comments"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 人抢先你了')); ?></p>
+    <p class="ui <?php $this->options->labelColor() ?> ribbon label comments"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 人抢先你了')); ?></p>
     
     <?php $comments->listComments(); ?>
 
@@ -14,7 +14,7 @@
     <div>
       	<?php $comments->cancelReply(); ?>
     </div>
-   	<p class="ui red ribbon label"><?php _e('添加新评论'); ?></p>
+   	<p class="ui ribbon label <?php $this->options->labelColor() ?>"><?php _e('添加新评论'); ?></p>
    	<form method="post" action="<?php $this->commentUrl() ?>" class="ui fluid form">
         <?php if($this->user->hasLogin()): ?>
         <div class="field"><?php _e('登录身份：'); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></div>
@@ -24,7 +24,7 @@
                 <input type="text" name="author" placeholder="<?php _e('称呼'); ?><?php _e(' (必填)')?>"value="<?php $this->remember('author'); ?>" />
             </div>
             <div class="field">
-                <input type="email" name="mail" placeholder="<?php _e('电子邮件'); ?><?php if ($this->options->commentsRequireMail): ?> (必填)<?php endif; ?>" value="<?php $this->remember('mail'); ?>" />
+                <input type="email" name="mail" placeholder="<?php _e('电子邮件'); ?><?php if ($this->options->commentsRequireMail): ?> (必填, 用来接收回复)<?php endif; ?>" value="<?php $this->remember('mail'); ?>" />
             </div>
         </div>
         <div class="field">
@@ -35,7 +35,7 @@
         <div class="field">
             <textarea rows="8" cols="50" placeholder="<?php _e('回复内容'); ?><?php _e(' (必填)')?>" name="text"><?php $this->remember('text'); ?></textarea>
         </div>
-        <button type="submit"><?php _e('提交评论'); ?></button>
+        <button type="submit" class="button <?php $this->options->labelColor() ?>"><?php _e('提交评论'); ?></button>
     </form>
 </div>
 
