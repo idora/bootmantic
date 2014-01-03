@@ -72,4 +72,4 @@ bootmantic = bootstrap + semantic
 [3]: http://slblog.qiniudn.com/blog/theme_content.png
 [4]: http://slblog.qiniudn.com/blog/theme_friend.png
 [5]: https://github.com/DreamHarbor/bootmantic
-
+[6]: http://slblog.qiniudn.com/blog/theme_setting.png
