@@ -10,7 +10,7 @@
 
 <?php if($this->allow('comment')): ?>
 
-<div class="block new-comment" id="respond-page-2">
+<div class="block new-comment" id="<?php $this->respondId(); ?>">
     <div>
       	<?php $comments->cancelReply(); ?>
     </div>
