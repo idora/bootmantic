@@ -80,8 +80,6 @@
             </form>
             <ul class="nav">
                 <li><a href="<?php $this->options->feedUrl(); ?>" class="zocial rss" target="_blank"></a></li>
-                <li><a href="https://github.com/DreamHarbor" class="zocial github" target="_blank"></a></li>
-                <li><a href="http://weibo.com/jtly5039" class="zocial weibo" target="_blank"></a></li>
             </ul>
         </div>
     </div>
