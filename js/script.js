@@ -1,8 +1,10 @@
 $(document).ready(function($){
-    // 页面刷新后自动回到顶部， 不知是否符合用户体验，试用一段时间先
+    /*
+    // 页面刷新后自动回到顶部, 这个按需选择吧
     $('html, body').animate({
         scrollTop: 0
     }, 800);
+    */
 
     // 利用 data-scroll 属性，滚动到任意 dom 元素
     $.scrollto = function(scrolldom, scrolltime) {	
