@@ -38,6 +38,8 @@ bootmantic = bootstrap + semantic
 使用
 ---
 
+项目托管在 [github][5] 上
+
 打包下载并解压, 或者直接git clone到网站根目录下的usr/themes/目录下, 然后进入后台选择并设置主题.
 
 
@@ -46,7 +48,7 @@ bootmantic = bootstrap + semantic
 
 各个设置项的作用和默认效果都写的很清楚了. 自己读吧.
 
-![theme_setting][5]
+![theme_setting][6]
 
 
 注意
@@ -64,7 +66,7 @@ else if ($pattern == "SHOW_SLOGER") {
 }
 ```
 
-![links_plugins][6]
+![links_plugins][7]
 
 
 `$pattern` 的名称无所谓, 但是要是跟我这里不一样的话, 需要修改sidebar.php修改相应的输出方式.
@@ -107,8 +109,9 @@ TODO
 
 
 [1]: http://blog.sloger.info
-[2]: images/theme_index.png
-[3]: images/theme_content.png
-[4]: images/theme_friend.png
-[5]: images/theme_setting.png
-[6]: images/links_plugins.png
+[2]: http://slblog.qiniudn.com/blog/theme_index.png
+[3]: http://slblog.qiniudn.com/blog/theme_content.png
+[4]: http://slblog.qiniudn.com/blog/theme_friend.png
+[5]: https://github.com/DreamHarbor/bootmantic
+[6]: http://slblog.qiniudn.com/blog/theme_setting.png
+[7]: http://slblog.qiniudn.com/blog/links_plugins.png
