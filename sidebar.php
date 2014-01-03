@@ -24,8 +24,7 @@
     <section class="block friend-list">
         <p class="ui red ribbon label">友情链接</p>
         <div class="animated list friend">
-            <!-- 我自行修改插件添加的输出方式, 默认没有这种方式 -->
-            <?php Links_Plugin::output("SHOW_SLOGER", 10); ?>
+            <?php Links_Plugin::output("<a class=\"item\" href=\"{url}\" title=\"{title}\" target=\"_blank\"><img class=\"avatar image\" src=\"{image}\" alt=\"{name}\" /><div class=\"content\"><p class=\"header\">{name}</p><p>{description}</p></div></a>\n", 10); ?>
         </div>
     </section>
     <?php endif; ?>
