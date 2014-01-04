@@ -45,6 +45,7 @@ $(document).ready(function($) {
     });
 
     // 异步评论翻页
+    // 暂未完成
     var ajaxed = false;
     $('#comments').on("click", ".page-navigator li a", function(e) {
         e.preventDefault();
