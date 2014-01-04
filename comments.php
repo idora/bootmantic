@@ -33,9 +33,9 @@
         <?php endif; ?>
 
         <div class="field">
-            <textarea rows="8" cols="50" placeholder="<?php _e('回复内容'); ?><?php _e(' (必填)')?>" name="text"><?php $this->remember('text'); ?></textarea>
+            <textarea rows="8" cols="50" id="comment-content" placeholder="<?php _e('回复内容'); ?><?php _e(' (必填)')?>" name="text"><?php $this->remember('text'); ?></textarea>
         </div>
-        <button type="submit" class="button <?php $this->options->labelColor() ?>"><?php _e('提交评论'); ?></button>
+        <button type="submit" id="comment-submit" class="button <?php $this->options->labelColor() ?>"><?php _e('提交评论 (Ctrl + Enter)'); ?></button>
     </form>
 </div>
 

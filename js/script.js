@@ -1,6 +1,6 @@
-$(document).ready(function($){
+$(document).ready(function($) {
     /*
-    // 页面刷新后自动回到顶部, 这个按需选择吧
+    // 页面刷新后自动回到顶部， 不知是否符合用户体验，试用一段时间先
     $('html, body').animate({
         scrollTop: 0
     }, 800);
@@ -30,6 +30,14 @@ $(document).ready(function($){
  
     // 新窗口打开链接
     $(".post a").attr("target", "_blank");
+
+    // Ctrl + Enter 提交回复
+    $('#comment-content').keydown(function(event) { 
+        if (event.ctrlKey && event.keyCode == 13) {
+            $('#comment-submit').click();
+            return false;
+        }
+    });
 
     // 点击标签 收起/展开 内容
     $('.side .block .label').click(function () {
