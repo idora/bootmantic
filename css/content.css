@@ -205,6 +205,11 @@
     padding: 5px 0px;
     display: list-item;
 }
+.side .list .item:after {
+    clear: both;
+    content: '';
+    display: table;
+}
 .side .list .item a {
     color: rgba(0, 0, 0, 0.8);
 }
