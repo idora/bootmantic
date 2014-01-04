@@ -11,21 +11,21 @@ function themeConfig($form) {
     $form->addInput($siteIcon);
 
     $labelColor = new Typecho_Widget_Helper_Form_Element_Select('labelColor', array(
-        'grey' => _t('灰色'),
         'red' => _t('红色'),
         'green' => _t('绿色'),
         'blue' => _t('蓝色'),
         'purple' => _t('紫色'),
         'orange' => _t('橙色'),
-        'teal' => _t('青色')
-    ), NULL, _t('标签颜色'), _t('包括标签的颜色和每篇文章中的圆形日期的颜色'));
+        'teal' => _t('青色'),
+        'grey' => _t('灰色')
+    ), 'red', _t('标签颜色'), _t('包括标签的颜色和每篇文章中的圆形日期的颜色'));
     $form->addInput($labelColor);
 
     $navbarMeta = new Typecho_Widget_Helper_Form_Element_Checkbox('navbarMeta', array(
         'ShowSearch' => _t('显示搜索框'),
         'ShowRSS' => _t('显示RSS订阅'),
         'ShowEmail' => _t('显示电子邮箱')),
-    array('ShowSearch', 'ShowRss', 'ShowEmail'), _t('导航栏显示'));
+    array('ShowSearch', 'ShowRSS', 'ShowEmail'), _t('导航栏显示'));
     $form->addInput($navbarMeta->multimode());
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', array(
@@ -35,7 +35,7 @@ function themeConfig($form) {
         'ShowCategory' => _t('显示分类'),
         'ShowArchive' => _t('显示归档'),
         'ShowOther' => _t('显示其它杂项')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowFriend', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
+    array('ShowRecentPosts', 'ShowRecentComments', 'ShowFriend', 'ShowOther'), _t('侧边栏显示'));
     
     $form->addInput($sidebarBlock->multiMode());
 }
