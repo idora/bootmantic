@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="field">
-            <input type="url" name="url" placeholder="<?php _e('个人主页'); ?><?php if ($this->options->commentsRequireURL): ?> (必填)<?php endif; ?>" value="<?php $this->remember('url'); ?>" />
+            <input type="url" name="url" placeholder="<?php _e('个人主页'); ?><?php if ($this->options->commentsRequireURL): ?><?php _e(' (必填)') ?><?php endif; ?>" value="<?php $this->remember('url'); ?>" />
         </div>
         <?php endif; ?>
 
