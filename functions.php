@@ -21,6 +21,12 @@ function themeConfig($form) {
     ), NULL, _t('标签颜色'), _t('包括标签的颜色和每篇文章中的圆形日期的颜色'));
     $form->addInput($labelColor);
 
+    $navbarMeta = new Typecho_Widget_Helper_Form_Element_Checkbox('navbarMeta', array(
+        'ShowSearch' => _t('显示搜索框'),
+        'ShowRSS' => _t('显示RSS订阅'),
+        'ShowEmail' => _t('显示电子邮箱')),
+    array('ShowSearch', 'ShowRss', 'ShowEmail'), _t('导航栏显示'));
+    $form->addInput($navbarMeta->multimode());
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', array(
         'ShowRecentPosts' => _t('显示最新文章'),

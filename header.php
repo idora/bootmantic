@@ -75,11 +75,18 @@
             <?php endwhile; ?>
         </ul>
         <div class="nav-right">
+            <?php if (!empty($this->options->navbarMeta) && in_array('ShowSearch', $this->options->navbarMeta)): ?>
             <form class="search-form" method="post" action="./">
                 <input type="text" name="s" class="search-input" placeholder="<?php _e('站内搜索'); ?>" />
             </form>
+            <?php endif; ?>
             <ul class="nav">
+                <?php if (!empty($this->options->navbarMeta) && in_array('ShowRSS', $this->options->navbarMeta)): ?>
                 <li><a href="<?php $this->options->feedUrl(); ?>" class="zocial rss" target="_blank"></a></li>
+                <?php endif; ?>
+                <?php if (!empty($this->options->navbarMeta) && in_array('ShowEmail', $this->options->navbarMeta)): ?>
+                <li><a href="mailto:<?php $this->author->mail(); ?>" class="zocial gmail" target="_blank"></a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
