@@ -24,7 +24,7 @@
                 <input type="text" name="author" placeholder="<?php _e('称呼'); ?><?php _e(' (必填)')?>"value="<?php $this->remember('author'); ?>" />
             </div>
             <div class="field">
-                <input type="email" name="mail" placeholder="<?php _e('电子邮件'); ?><?php if ($this->options->commentsRequireMail): ?> (必填, 用来接收回复)<?php endif; ?>" value="<?php $this->remember('mail'); ?>" />
+                <input type="email" name="mail" placeholder="<?php _e('电子邮件'); ?><?php if ($this->options->commentsRequireMail): ?><?php _e(' (必填)') ?><?php endif; ?>" value="<?php $this->remember('mail'); ?>" />
             </div>
         </div>
         <div class="field">
