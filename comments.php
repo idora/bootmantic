@@ -1,8 +1,7 @@
 <?php $this->comments()->to($comments); ?>
 
-<div class="block">
+<div class="block" id="comments">
     <p class="ui <?php $this->options->labelColor() ?> ribbon label comments"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 人抢先你了')); ?></p>
-    
     <?php $comments->listComments(); ?>
 
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
@@ -41,6 +40,8 @@
 
 <?php else: ?>
 
-<h3><?php _e('评论已关闭'); ?></h3>
+<div class="block">
+    <p class="ui ribbon label <?php $this->options->labelColor() ?>"><?php _e('楼主残忍的关闭了评论'); ?></p>
+</div>
 
 <?php endif; ?>

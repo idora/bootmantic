@@ -1,17 +1,10 @@
 $(document).ready(function($) {
-    /*
-    // 页面刷新后自动回到顶部， 不知是否符合用户体验，试用一段时间先
-    $('html, body').animate({
-        scrollTop: 0
-    }, 800);
-    */
-
     // 利用 data-scroll 属性，滚动到任意 dom 元素
     $.scrollto = function(scrolldom, scrolltime) {	
         $(scrolldom).click( function(){ 
             var scrolltodom = $(this).attr("data-scroll");
             $(this).addClass("active").siblings().removeClass("active");
-            $('html,body').animate({
+            $('html, body').animate({
                 scrollTop: $(scrolltodom).offset().top
             }, scrolltime);
             return false;
@@ -49,5 +42,30 @@ $(document).ready(function($) {
     $('.main .block .round-date').click(function () {
         $(this).siblings('.label').slideToggle("slow");
         $(this).siblings('.article-content').slideToggle("slow");
+    });
+
+    // 异步评论翻页
+    var ajaxed = false;
+    $('#comments').on("click", ".page-navigator li a", function(e) {
+        e.preventDefault();
+
+        if ($(this).parent().hasClass('current') || ajaxed == true)
+            return; 
+        url = $(this).attr("href").replace("#comments", "") + "?action=ajax_comments";
+
+        $.ajax({ 
+           url: url,
+           beforeSend: function() {
+               $('#comments .comment-list').html('<p class="waiting">正在努力加载内容, 请稍等...</p>');
+               ajaxed = true;
+           },
+           success: function(data) {
+               $('#comments + .new-comment').remove();
+               $('#comments').replaceWith(data);
+               $.scrollto('#comments', 500);
+               ajaxed = false;
+           }
+        });
+        return false;
     });
 });

@@ -1,4 +1,12 @@
-<?php $this->need('header.php'); ?>
+<?php
+
+    if (isset($_GET["action"]) && $_GET["action"] == "ajax_comments") {
+        $this->need('comments.php');
+    } else {
+        if(strpos($_SERVER["PHP_SELF"],"themes")) header('Location:/');
+        $this->need('header.php');
+
+?>
 
 <div class="main">
     <article class="block post">
@@ -14,15 +22,9 @@
         <p class="tags"><?php _e('标签：'); ?><?php $this->tags(', ', true, 'none'); ?></p>
     </article>
 
-<!--
-    <div class="block page-link">
-        <?php $this->thePrev('<< %s', '没有上一篇'); ?>
-        <?php $this->theNext('%s >>', '没有下一篇'); ?>
-    </div>
--->
-
     <?php $this->need('comments.php'); ?>
 </div>
 
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>
+<?php } ?>

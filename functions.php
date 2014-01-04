@@ -11,13 +11,13 @@ function themeConfig($form) {
     $form->addInput($siteIcon);
 
     $labelColor = new Typecho_Widget_Helper_Form_Element_Select('labelColor', array(
-        'grey' => _t('灰色')
+        'grey' => _t('灰色'),
         'red' => _t('红色'),
         'green' => _t('绿色'),
         'blue' => _t('蓝色'),
         'purple' => _t('紫色'),
         'orange' => _t('橙色'),
-        'teal' => _t('青色'),
+        'teal' => _t('青色')
     ), NULL, _t('标签颜色'), _t('包括标签的颜色和每篇文章中的圆形日期的颜色'));
     $form->addInput($labelColor);
 
