@@ -61,8 +61,7 @@ $(document).ready(function($) {
                ajaxed = true;
            },
            success: function(data) {
-               $('#comments + .new-comment').remove();
-               $('#comments').replaceWith(data);
+               $('#comments').html(data);
                $.scrollto('#comments', 500);
                ajaxed = false;
            }

@@ -1,6 +1,6 @@
 <?php $this->comments()->to($comments); ?>
-
-<div class="block" id="comments">
+<div id="comments">
+<div class="block">
     <p class="ui <?php $this->options->labelColor() ?> ribbon label comments"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 人抢先你了')); ?></p>
     <?php $comments->listComments(); ?>
 
@@ -37,7 +37,7 @@
         <button type="submit" id="comment-submit" class="button <?php $this->options->labelColor() ?>"><?php _e('提交评论 (Ctrl + Enter)'); ?></button>
     </form>
 </div>
-
+</div>
 <?php else: ?>
 
 <div class="block">
