@@ -10,7 +10,7 @@
 
 <div class="main">
     <article class="block post">
-        <span class="round-date <?php $this->options->labelColor() ?>">
+        <span class="round-date <?php $this->options->singleColor() ?>">
             <span class="month"><?php $this->date('m月'); ?></span>
             <span class="day"><?php $this->date('d'); ?></span>
         </span>

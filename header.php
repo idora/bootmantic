@@ -54,7 +54,7 @@
 
 <body>
   
-<div id="back-to-top" class="<?php $this->options->labelColor() ?>" data-scroll="body">
+<div id="back-to-top" class="<?php $this->options->singleColor() ?>" data-scroll="body">
     <svg id="rocket" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
         <path fill="#CCCCCC" d="M42.057,37.732c0,0,4.139-25.58-9.78-36.207c-0.307-0.233-0.573-0.322-0.802-0.329
         c-0.227,0.002-0.493,0.083-0.796,0.311c-13.676,10.31-8.95,35.992-8.95,35.992c-10.18,8-7.703,9.151-1.894,23.262
