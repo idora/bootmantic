@@ -16,7 +16,7 @@
         </span>
         <p class="title"><?php $this->title() ?></p>
         <p class="article-meta">本文由 <?php $this->author(); ?> <?php $this->date('发表于 Y 年 m 月 d 日'); ?></p>
-        <div class="article-content">
+        <div class="article-content <?php $this->options->singleColor() ?>">
             <?php $this->content(); ?>
         </div>
         <p class="tags"><?php _e('标签：'); ?><?php $this->tags(', ', true, 'none'); ?></p>
