@@ -15,5 +15,6 @@
 <?php $this->footer(); ?>
 <script src="<?php $this->options->adminUrl('js/jquery.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/script.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/comments.js'); ?>"></script>
     </body>
 </html>

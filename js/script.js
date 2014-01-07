@@ -38,33 +38,4 @@ $(document).ready(function($) {
         $(this).siblings('.label').slideToggle("slow");
         $(this).siblings('.article-content').slideToggle("slow");
     });
-
-    // 异步评论翻页
-    // 来自 孙华博客 http://sunhua.me/
-    var comments = $("#comments"), navi = $('#comments .page-navigator'), ajaxed = false;
-    comments.on("click", ".page-navigator li a", function(e) {
-        e.preventDefault();
-        if($(this).parent().hasClass('current') || ajaxed == true) return;
-        var _list = $('.comment-list'),
-            url = $(this).attr("href").replace("#comments", "") + "?action=ajax_comments";
-        $.ajax({
-            url: url,
-            beforeSend: function() {
-                ajaxed = true;
-                document.body.style.cursor = 'wait';
-                var C = 0.7;
-                $(comments).css({opacity: C, filter: 'alpha(opacity=' + C * 100 + ')'});                
-                $(navi).html('<a>正在努力加载中, 请稍候...</a>');
-            },
-            success: function(data) {
-                comments.html(data);
-                document.body.style.cursor = 'auto';
-                var C = 1; 
-                $(comments).css({opacity:C, filter:'alpha(opacity=' + C * 100 + ')'});
-                $('html, body').animate({scrollTop: $(comments).offset().top - $('.navbar').height() - 10}, 'slow');
-                ajaxed = false;
-            }
-        });
-        return false;
-    });
 });
