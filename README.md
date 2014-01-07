@@ -58,8 +58,6 @@ bootmantic = bootstrap + semantic
 
 ###TODO###
 
-- 搜索框还不是很满意
-
 - 响应式布局不满意, 目前导航栏采取的是直接隐藏的偷懒做法
 
 ###再说明###

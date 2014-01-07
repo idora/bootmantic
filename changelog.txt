@@ -1,5 +1,14 @@
+Version 1.3
+	-- 2014-01-07 18:04
+add: 增加ajax异步评论翻页
+add: pre code 颜色跟随颜色主题
+fix: 导航栏a在windows下高度差2px
+fix: pre code文字可选, 光标自动
+opt: 更换icon字体为fa
+opt: 导航栏右侧增加可选的 进入后台/登录
+
 Version 1.2
-    -- 2014-01-04 12:28:30
+    -- 2014-01-04 12:28
 
 add: 是时候增加changelog了
 add: 增加选择主题颜色的功能
@@ -8,4 +17,4 @@ add: 增加导航栏右侧内容自定义
 fix: 友情链接资料不全时条目错位问题
 fix: 更改友情链接输出方式, 无需修改links插件
 fix: 更改导航栏折叠的宽度范围, 解决页面很多时错位问题
-optimize: 清除掉无用的class和id
+opt: 清除掉无用的class和id
