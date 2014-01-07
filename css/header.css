@@ -148,10 +148,6 @@
 .navbar a.active {
     background: #000;
 }
-.navbar .nav-right a {
-    padding: 0px;
-    padding-top: 5px;
-}
 
 
 /* 站点标题 */

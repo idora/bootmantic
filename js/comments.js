@@ -16,7 +16,7 @@ $(document).ready(function($) {
                 ajaxed = true;
                 document.body.style.cursor = 'wait';
                 $(comment_block).css({opacity: 0.7, filter: 'alpha(opacity=70)'});
-                $(navi).html('<p style="text-align: center;">正在努力加载中, 请稍候...</p>');
+                $(navi).html('<p>正在努力加载中, 请稍候...</p>');
             },
             success: function(data) {
                 comments.html(data);

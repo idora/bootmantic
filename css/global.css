@@ -192,6 +192,15 @@ footer a:hover {
     color: rgb(200, 200, 200);
 }
 
+/* Font Awesome 字体 */
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
 /* 光标 */
 .side .block .label:hover, .main .block .comments:hover, .main .block .round-date:hover {
     cursor: pointer;
@@ -201,8 +210,4 @@ footer a:hover {
 #content {
     position:relative;
     margin-top: -180px;
-}
-
-.zocial:before {
-    border: none;
 }

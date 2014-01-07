@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/form.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/label.css'); ?>">    
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/zocial.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/global.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/header.css'); ?>">
@@ -82,10 +82,17 @@
             <?php endif; ?>
             <ul class="nav">
                 <?php if (!empty($this->options->navbarMeta) && in_array('ShowRSS', $this->options->navbarMeta)): ?>
-                <li><a href="<?php $this->options->feedUrl(); ?>" class="zocial rss" target="_blank"></a></li>
+                <li><a class="fa fa-rss" href="<?php $this->options->feedUrl(); ?>" target="_blank"></a></li>
                 <?php endif; ?>
                 <?php if (!empty($this->options->navbarMeta) && in_array('ShowEmail', $this->options->navbarMeta)): ?>
-                <li><a href="mailto:<?php $this->author->mail(); ?>" class="zocial gmail" target="_blank"></a></li>
+                <li><a class="fa fa-envelope" href="mailto:<?php $this->author->mail(); ?>" target="_blank"></a></li>
+                <?php endif; ?>
+                <?php if (!empty($this->options->navbarMeta) && in_array('ShowAdmin', $this->options->navbarMeta)): ?>
+                <?php if($this->user->hasLogin()): ?>
+                <li><a class="fa fa-cog" href="<?php $this->options->adminUrl(); ?>" target="_blank"></a></li>
+                <?php else: ?>
+                <li><a class="fa fa-user" href="<?php $this->options->adminUrl('login.php'); ?>"></a></li>
+                <?php endif; ?>
                 <?php endif; ?>
             </ul>
         </div>

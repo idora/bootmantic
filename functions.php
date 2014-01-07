@@ -24,8 +24,9 @@ function themeConfig($form) {
     $navbarMeta = new Typecho_Widget_Helper_Form_Element_Checkbox('navbarMeta', array(
         'ShowSearch' => _t('显示搜索框'),
         'ShowRSS' => _t('显示RSS订阅'),
-        'ShowEmail' => _t('显示电子邮箱')),
-    array('ShowSearch', 'ShowRSS', 'ShowEmail'), _t('导航栏显示'));
+        'ShowEmail' => _t('显示电子邮箱'),
+        'ShowAdmin' => _t('显示管理/登录')),
+    array('ShowSearch', 'ShowRSS', 'ShowEmail', 'ShowAdmin'), _t('导航栏显示'));
     $form->addInput($navbarMeta);
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', array(
