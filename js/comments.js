@@ -3,7 +3,7 @@ $(document).ready(function($) {
     // 来自 孙华博客 http://sunhua.me/
 	var comments = $("#comments"),
 	navi = $('#comments .page-navigator'),
-	comment_block = $("#comments .block.comment"),
+	comment_block = $("#comments .block.comment-block"),
 	ajaxed = false;
 	comments.on("click", ".page-navigator li a", function(e) {
 		e.preventDefault();
