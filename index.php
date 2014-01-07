@@ -3,9 +3,9 @@
 /**
  * 这是Sloger的包含bootstrap和semantic的主题
  * 
- * @package Boot-Sematic Theme
+ * @package Bootmantic Theme
  * @author Sloger
- * @version 1.0
+ * @version 1.3
  * @link http://blog.sloger.info
  */
  
