@@ -1,15 +1,12 @@
 $(document).ready(function($) {
-    // 利用 data-scroll 属性，滚动到任意 dom 元素
-    $.scrollto = function(scrolldom, scrolltime) {	
-        $(scrolldom).click( function(){ 
-            var scrolltodom = $(this).attr("data-scroll");
-            $(this).addClass("active").siblings().removeClass("active");
-            $('html, body').animate({
-                scrollTop: $(scrolltodom).offset().top
-            }, scrolltime);
-            return false;
-        }); 		
-    };
+    // 返回顶部
+    $("#back-to-top").click(function(){ 
+        var scrolltodom = $(this).attr("data-scroll");
+        $('html, body').animate({
+            scrollTop: $(scrolltodom).offset().top
+        }, 800);
+        return false;
+    });
     // 判断位置控制 返回顶部的显隐
     $(window).scroll(function() {
         if ($(window).scrollTop() > 700) {
@@ -18,15 +15,13 @@ $(document).ready(function($) {
             $("#back-to-top").fadeOut(800);
         }
     });
-    // 启用
-    $.scrollto("#back-to-top", 800);
- 
+
     // 新窗口打开链接
     $(".post a").attr("target", "_blank");
 
     // Ctrl + Enter 提交回复
-    $('#comment-content').keydown(function(event) { 
-        if (event.ctrlKey && event.keyCode == 13) {
+    $('#comment-content').keydown(function(event) {
+        if (event.ctrlKey && event.keyCode == 13 || event.keyCode == 10) {
             $('#comment-submit').click();
             return false;
         }
@@ -45,26 +40,30 @@ $(document).ready(function($) {
     });
 
     // 异步评论翻页
-    // 暂未完成
-    var ajaxed = false;
-    $('#comments').on("click", ".page-navigator li a", function(e) {
+    // 来自 孙华博客 http://sunhua.me/
+    var comments = $("#comments"), navi = $('#comments .page-navigator'), ajaxed = false;
+    comments.on("click", ".page-navigator li a", function(e) {
         e.preventDefault();
-
-        if ($(this).parent().hasClass('current') || ajaxed == true)
-            return; 
-        url = $(this).attr("href").replace("#comments", "") + "?action=ajax_comments";
-
-        $.ajax({ 
-           url: url,
-           beforeSend: function() {
-               $('#comments .comment-list').html('<p class="waiting">正在努力加载内容, 请稍等...</p>');
-               ajaxed = true;
-           },
-           success: function(data) {
-               $('#comments').html(data);
-               $.scrollto('#comments', 500);
-               ajaxed = false;
-           }
+        if($(this).parent().hasClass('current') || ajaxed == true) return;
+        var _list = $('.comment-list'),
+            url = $(this).attr("href").replace("#comments", "") + "?action=ajax_comments";
+        $.ajax({
+            url: url,
+            beforeSend: function() {
+                ajaxed = true;
+                document.body.style.cursor = 'wait';
+                var C = 0.7;
+                $(comments).css({opacity: C, filter: 'alpha(opacity=' + C * 100 + ')'});                
+                $(navi).html('<a>正在努力加载中, 请稍候...</a>');
+            },
+            success: function(data) {
+                comments.html(data);
+                document.body.style.cursor = 'auto';
+                var C = 1; 
+                $(comments).css({opacity:C, filter:'alpha(opacity=' + C * 100 + ')'});
+                $('html, body').animate({scrollTop: $(comments).offset().top - $('.navbar').height() - 10}, 'slow');
+                ajaxed = false;
+            }
         });
         return false;
     });

@@ -112,8 +112,13 @@ pre, code {
     border-radius: 5px;
     color: #DE3859;
     border: 1px solid #ddd;
+    cursor: auto;
     padding: 2px 5px;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
+
+    user-select: initial;
+    -moz-user-select: initial;
+    -webkit-user-select: initial;
 }
 pre {
     padding: 10px;
