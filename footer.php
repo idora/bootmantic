@@ -16,5 +16,16 @@
 <script src="<?php $this->options->adminUrl('js/jquery.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/script.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/comments.js'); ?>"></script>
+
+<?php if (isset($_GET["anchor"]) && $_GET['anchor'] != ''): ?>
+<script>
+    $(document).ready(function() {
+        $('html, body').animate({
+            scrollTop: $('#<?php echo $_GET['anchor']; ?>').offset().top - 50
+        }, 800);
+    });
+</script>
+<?php endif; ?>
+
     </body>
 </html>

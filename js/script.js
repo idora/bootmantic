@@ -38,4 +38,9 @@ $(document).ready(function($) {
         $(this).siblings('.label').slideToggle("slow");
         $(this).siblings('.article-content').slideToggle("slow");
     });
+
+    $('.recent-comments .item a').click(function () {
+        $(this).attr('href', $(this).attr('href').replace('#', '?anchor='));
+        return true;
+    });
 });
