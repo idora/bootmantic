@@ -96,9 +96,10 @@
 .navbar .search-form .search-input {
     border: none;
     height: 25px;
-    color: #fff;
+    width: 150px;
     padding: 0px 0px 0px 5px;
     margin-top: 7px;
+    color: #fff;
     background: transparent;
 }
 .navbar .search-form .search-input:focus {
