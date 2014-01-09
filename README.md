@@ -21,15 +21,15 @@ bootmantic = bootstrap + semantic
 
 首页:
 
-![theme_index][2]
+![bootmantic_index][2]
 
 正文:
 
-![theme_content][3]
+![bootmantic_content][3]
 
 友情链接:
 
-![theme_friend][4]
+![bootmantic_friend][4]
 
 
 ###使用###
@@ -43,7 +43,7 @@ bootmantic = bootstrap + semantic
 
 各个设置项的作用和默认效果都写的很清楚了. 自己读吧.
 
-![theme_setting][6]
+![bootmantic_setting][6]
 
 
 ###说明###
@@ -66,8 +66,8 @@ bootmantic = bootstrap + semantic
 
 
 [1]: http://blog.sloger.info
-[2]: http://slblog.qiniudn.com/blog/theme_index.png
-[3]: http://slblog.qiniudn.com/blog/theme_content.png
-[4]: http://slblog.qiniudn.com/blog/theme_friend.png
+[2]: http://slblog.qiniudn.com/blog/bootmantic_index.png
+[3]: http://slblog.qiniudn.com/blog/bootmantic_content.png
+[4]: http://slblog.qiniudn.com/blog/bootmantic_friend.png
 [5]: https://github.com/DreamHarbor/bootmantic
-[6]: http://slblog.qiniudn.com/blog/theme_setting.png
+[6]: http://slblog.qiniudn.com/blog/bootmantic_setting.png
