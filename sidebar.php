@@ -1,6 +1,6 @@
 <div class="side">
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
-    <section class="block recent-post">
+    <section class="block recent-posts">
         <p class="ui <?php $this->options->singleColor() ?> ribbon label"><?php _e('最新文章'); ?></p>
         <div class="list">
             <?php $this->widget('Widget_Contents_Post_Recent')->parse('<a href="{permalink}" class="item" target="_blank">{title}</a>'); ?>

@@ -2,6 +2,7 @@ Version 1.3
 	-- 2014-01-07 18:04
 add: 增加ajax异步评论翻页
 add: pre code 颜色跟随颜色主题
+add: 平滑滚动至评论锚点
 fix: 导航栏a在windows下高度差2px
 fix: pre code文字可选, 光标自动
 opt: 更换icon字体为fa
