@@ -12,20 +12,21 @@
     </div>
 </footer>
 
-<?php $this->footer(); ?>
 <script src="<?php $this->options->adminUrl('js/jquery.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/script.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/comments.js'); ?>"></script>
 
-<?php if (isset($_GET["anchor"]) && $_GET['anchor'] != ''): ?>
+<?php $this->footer(); ?>
+
 <script>
     $(document).ready(function() {
-        $('html, body').animate({
-            scrollTop: $('#<?php echo $_GET['anchor']; ?>').offset().top - 50
-        }, 800);
+        var anchor = window.location.hash;
+        if( anchor != '') {
+            $('html, body').animate({
+                scrollTop: $('#' + anchor.split("=")[1]).offset().top - $('.navbar').height() - 10}, 'slow');
+        }
     });
 </script>
-<?php endif; ?>
 
     </body>
 </html>
