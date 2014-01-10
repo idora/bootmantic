@@ -21,12 +21,15 @@
     <?php endif; ?>
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowFriend', $this->options->sidebarBlock)): ?>
+        <?php $all = Typecho_Plugin::export();?>
+        <?php if (array_key_exists('Links', $all['activated'])) : ?>
     <section class="block friend-list">
         <p class="ui <?php $this->options->singleColor() ?> ribbon label">友情链接</p>
         <div class="animated list friend">
             <?php Links_Plugin::output("<a class=\"item\" href=\"{url}\" title=\"{title}\" target=\"_blank\"><img class=\"avatar image\" src=\"{image}\" alt=\"{name}\" /><div class=\"content\"><p class=\"header\">{name}</p><p>{description}</p></div></a>\n", 10); ?>
         </div>
     </section>
+        <?php endif; ?>
     <?php endif; ?>
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
