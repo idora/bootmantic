@@ -40,7 +40,7 @@ $(document).ready(function($) {
     });
 
     $('.recent-comments .item a').click(function () {
-        $(this).attr('href', $(this).attr('href').replace('#', '#anchor='));
-        return true;
+        window.open($(this).attr('href').replace('#comment', '#anchor=comment'));
+        return false;
     });
 });
