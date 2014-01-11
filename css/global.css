@@ -111,6 +111,7 @@ pre, code {
     border: 1px solid #ddd;
     cursor: auto;
     padding: 2px 5px;
+    font-size: 14px;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
 
     user-select: initial;
