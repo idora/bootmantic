@@ -36,7 +36,7 @@ function themeConfig($form) {
         'ShowCategory' => _t('显示分类'),
         'ShowArchive' => _t('显示归档'),
         'ShowOther' => _t('显示其它杂项')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowFriend', 'ShowOther'), _t('侧边栏显示'));
+    array('ShowRecentPosts', 'ShowRecentComments', 'ShowFriend'), _t('侧边栏显示'));
     
     $form->addInput($sidebarBlock->multimode());
 }
