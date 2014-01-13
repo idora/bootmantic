@@ -7,6 +7,7 @@ fix: 导航栏a在windows下高度差2px
 fix: pre code文字可选, 光标自动
 opt: 更换icon字体为fa
 opt: 导航栏右侧增加可选的 进入后台/登录
+opt: 优化导航栏搜索框
 
 Version 1.2
     -- 2014-01-04 12:28

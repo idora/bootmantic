@@ -26,7 +26,7 @@ function themeConfig($form) {
         'ShowRSS' => _t('显示RSS订阅'),
         'ShowEmail' => _t('显示电子邮箱'),
         'ShowAdmin' => _t('显示管理/登录')),
-    array('ShowSearch', 'ShowRSS', 'ShowEmail', 'ShowAdmin'), _t('导航栏显示'));
+    array('ShowSearch', 'ShowRSS', 'ShowAdmin'), _t('导航栏显示'));
     $form->addInput($navbarMeta);
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', array(
