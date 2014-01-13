@@ -78,6 +78,7 @@
             <?php if (!empty($this->options->navbarMeta) && in_array('ShowSearch', $this->options->navbarMeta)): ?>
             <form class="search-form" method="post" action="./">
                 <input type="text" name="s" class="search-input" placeholder="<?php _e('站内搜索'); ?>" />
+                <button type="submit" class="search-submit fa fa-search"></button>
             </form>
             <?php endif; ?>
             <ul class="nav">
