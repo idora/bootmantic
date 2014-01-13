@@ -11,7 +11,7 @@
  *      整体框架
  *
  *********************/
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, img, footer {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, footer {
     margin: 0px;
     cursor: default;
 
