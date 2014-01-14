@@ -137,7 +137,7 @@
 .navbar .search-form .search-submit:focus {
     outline: none;
 }
-.navbar .search-form:hover .search-submit {
+.navbar .search-form:hover .search-submit, .navbar .search-input:focus + .search-submit {
     color: #fff;
 
     transform: rotateY(180deg);
