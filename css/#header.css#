@@ -139,35 +139,7 @@
 }
 .navbar .search-form:hover .search-submit, .navbar .search-input:focus + .search-submit {
     color: #fff;
-
-    transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -webkit-transform: rotateY(-180deg);
-}
-
-@media (max-width: 768px) {
-    .navbar .nav-right .search-form {
-        display: none;
-    }
-}
-@media (max-width: 550px) {
-    .navbar .nav-right {
-        display: none;
-    }
-}
-@media (max-width: 300px) {
-    .navbar .nav {
-        display: none;
-    }
-}
-
-.navbar .nav li {
-    display: inline;
-}
-.navbar .nav li.active, .navbar .nav li:focus {
-    color: #fff;
-    background-color: #111;
+o11;
 }
 .navbar .nav li a:hover {
     color: #fff;
