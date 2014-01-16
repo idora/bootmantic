@@ -90,6 +90,22 @@
     float: right;
 }
 
+@media (max-width: 768px) {
+    .nav-right .search-form {
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .nav-right {
+        display: none;
+    }
+}
+@media (max-width: 300px) {
+    .nav {
+        display: none;
+    }
+}
+
 /* 导航栏右侧搜索框 */
 .search-form {
     float: left;
@@ -138,29 +154,13 @@
 .search-form .search-submit:focus {
     outline: none;
 }
-.search-form:hover .search-submit {
+.search-form:hover .search-submit, .search-form .search-input:focus + .search-submit {
     color: #fff;
 
     transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
-}
-
-@media (max-width: 768px) {
-    .nav-right .search-form {
-        display: none;
-    }
-}
-@media (max-width: 550px) {
-    .nav-right {
-        display: none;
-    }
-}
-@media (max-width: 300px) {
-    .nav {
-        display: none;
-    }
 }
 
 /* 导航菜单 */
