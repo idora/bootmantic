@@ -37,7 +37,6 @@
         <button type="submit" id="comment-submit" class="button <?php $this->options->singleColor() ?>"><?php _e('提交评论 (Ctrl + Enter)'); ?></button>
     </form>
 </div>
-</div>
 <?php else: ?>
 
 <div class="block">
@@ -45,3 +44,4 @@
 </div>
 
 <?php endif; ?>
+</div>
