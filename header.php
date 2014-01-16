@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="google-site-verification" content="ScmDBVL4m8_1FCWi0q1GowKId0hYzo3t10pCTkxiMwg" />
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -67,12 +66,32 @@
 
 <div class="navbar">
     <div class="container">
-        <ul class="nav">
-            <li><a<?php if($this->is('index')): ?> class="active"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+        <ul class="nav nav-menu">
+            <?php if (!empty($this->options->navbarNav) && in_array('ShowIndex', $this->options->navbarNav)): ?>
+            <li <?php if($this->is('index')): ?> class="active"<?php endif; ?>><a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+            <?php endif; ?>
+            <?php if (!empty($this->options->navbarNav) && in_array('ShowCategoryMenu', $this->options->navbarNav)): ?>
+            <li <?php if($this->is('category')): ?> class="active"<?php endif; ?>>
+                <a>分类</a>
+                <ul class="submenu">
+                  <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
+                </ul>
+            </li>
+            <?php endif; ?>
+            <?php if (!empty($this->options->navbarNav) && in_array('ShowArchiveMenu', $this->options->navbarNav)): ?>
+            <li <?php if($this->is('archive') && !$this->is('category')): ?> class="active"<?php endif; ?>>
+                <a>归档</a>
+                <ul class="submenu">
+                    <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y 年 m 月')->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
+                </ul>
+            </li>
+            <?php endif; ?>
+            <?php if (!empty($this->options->navbarNav) && in_array('ShowPage', $this->options->navbarNav)): ?>
             <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
             <?php while($pages->next()): ?>
-            <li><a<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
+            <li<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?>><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
             <?php endwhile; ?>
+            <?php endif; ?>
         </ul>
         <div class="nav-right">
             <?php if (!empty($this->options->navbarMeta) && in_array('ShowSearch', $this->options->navbarMeta)): ?>
