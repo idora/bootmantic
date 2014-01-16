@@ -165,9 +165,8 @@
 
 /* 导航菜单 */
 .nav li {
-    display: inline;
+    display: inline-block;
     position: relative;
-    padding: 12px 0px;
 }
 .nav a {
     display: inline-block;
