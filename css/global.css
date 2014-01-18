@@ -109,44 +109,45 @@ pre, code {
     border-radius: 5px;
     color: #DE3859;
     border: 1px solid #ddd;
-    cursor: auto;
-    padding: 2px 5px;
+    overflow: auto;
     font-size: 14px;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
-
+}
+code {
+    padding: 2px;
+}
+pre code {
+    padding: 20px;
+    display: block;
+    border: 0px;
+    border-left: 4px solid #de3859;
+}
+code, code span {
+    cursor: auto;
     user-select: initial;
     -moz-user-select: initial;
     -webkit-user-select: initial;
 }
-pre {
-    padding: 10px;
-    border-left: 4px solid #de3859;
-    overflow: auto;
-}
-pre code {
-    border: 0px;
-    padding: 0px;
-}
 
-.article-content.red pre {
+.article-content.red pre code {
     border-left-color: #D95C5C;
 }
-.article-content.green pre {
+.article-content.green pre code {
     border-left-color: #A1CF64;
 }
-.article-content.blue pre {
+.article-content.blue pre code {
     border-left-color: #6ECFF5;
 }
-.article-content.purple pre {
+.article-content.purple pre code {
     border-left-color: #564F8A;
 }
-.article-content.orange pre {
+.article-content.orange pre code {
     border-left-color: #F05940;
 }
-.article-content.teal pre {
+.article-content.teal pre code {
     border-left-color: #00B5AD;
 }
-.article-content.grey pre {
+.article-content.grey pre code {
     border-left-color: #E8E8E8;
 }
 
