@@ -117,7 +117,7 @@ code {
     padding: 2px;
 }
 pre code {
-    padding: 20px;
+    padding: 10px 20px;
     display: block;
     border: 0px;
     border-left: 4px solid #de3859;
