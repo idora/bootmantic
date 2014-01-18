@@ -107,9 +107,8 @@ img.avatar {
 
 pre, code {
     border-radius: 5px;
-    color: #DE3859;
     border: 1px solid #ddd;
-    overflow: auto;
+    color: #DE3859;
     font-size: 14px;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
 }
@@ -124,6 +123,7 @@ pre code {
 }
 code, code span {
     cursor: auto;
+    overflow: auto;
     user-select: initial;
     -moz-user-select: initial;
     -webkit-user-select: initial;
